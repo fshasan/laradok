@@ -8,6 +8,11 @@ else
     cp docker-compose.yml.example docker-compose.yml
 fi
 
+read -p "Do you want to review the docker file? y/n: " CHOICE
+if [[ $CHOICE == "y" ]]; then
+	nano docker-compose.yml
+fi
+
 if [ -f ".env" ]; then
     echo ".env already exists"
 else
@@ -20,9 +25,9 @@ if [[ $CHOICE == "y" ]]; then
 	nano .env
 fi
 
-#laravel app
-echo "Cloning latest version of laravel"
-git clone https://github.com/laravel/laravel.git app
+#### Clone your laravel repo and write down the command here ####
+
+git clone
 cp app/.env.example app/.env
 
 #docker 
@@ -32,8 +37,8 @@ docker-compose up -d
 
 #laravel app permissions
 echo "Setting laravel app permissions"
-sudo chmod -R 777 app/storage
-sudo chmod -R 777 app/bootstrap/cache
+sudo chmod -R 775 app/storage
+sudo chmod -R 775 app/bootstrap/cache
 
 #laravel dependencies
 echo "Installing laravel dependencies"
