@@ -1,12 +1,3 @@
-# Containerized your laravel application with laradok
-
-This is a Laravel application containerized with PHP8.1, Nginx, MySQL, Worker, Mailhog, and Redis. It can be used as a base setup to quickly get started with Laravel development.
-
-## Prerequisites
-
-- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04) 
-- [Docker Compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
-
 ## Installation
 
 To install the application, follow the steps below:
@@ -23,7 +14,13 @@ To install the application, follow the steps below:
    cd laradok
    ```
 
-3. Run the installation script:
+3. Update the installation script (provide your laravel repository):
+
+   ```
+   nano install.sh
+   ```
+   
+4. Run the installation script:
 
    ```
    sh install.sh
@@ -32,8 +29,6 @@ To install the application, follow the steps below:
    ```
    ./install.sh
    ```
-
-The installation script checks for the existence of `docker-compose.yml` and `.env` files, and copies them from the example files if they do not exist. It also clones the latest version of Laravel, sets file permissions, installs Laravel dependencies, generates an application key, and restarts the containers.
 
 ## Configuration
 
@@ -72,7 +67,3 @@ The following services are included in the `docker-compose.yml` file:
 ## Volumes
 
 The `./data` directory is used to store persistent data for the MySQL and Redis services.
-
-## Contributing
-
-Feel free to contribute to this repository by creating issues and pull requests.
