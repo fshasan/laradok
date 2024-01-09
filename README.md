@@ -5,7 +5,7 @@ To install the application, follow the steps below:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/azonedev/laradok.git
+   git clone [https://github.com/azonedev/laradok.git](https://github.com/fshasan/laradok.git)
    ```
 
 2. Navigate to the cloned directory:
